@@ -95,7 +95,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="experience" data-aos="fade-up">
+                    <div class="experience" data-aos="fade-bottom">
                         <div class="exp">
                             <img src="/Image&icon/directory-plus-1663-svgrepo-com.svg" alt="logo dossier">
                             <div class="txt">
@@ -333,7 +333,7 @@
                     </p>
                 </div>
                 <div class="skills">
-                    <div class="skill">
+                    <div class="skill" data-aos="fade-up">
                         <div class="head">
                             <img src="/Image&icon/icon1/html-5-original.svg" alt="logo html">
                             <div class="txt">
@@ -348,7 +348,7 @@
                             <p>90%</p>
                         </div>
                     </div>
-                    <div class="skill">
+                    <div class="skill" data-aos="fade-up">
                         <div class="head">
                             <img src="/Image&icon/icon1/css-3-original.svg" alt="logo css">
                             <div class="txt">
@@ -363,7 +363,8 @@
                             <p>85%</p>
                         </div>
                     </div>
-                    <div class="skill">
+                    <div class="skill" data-aos="fade-up" 
+                    data-aos-delay="600">
                         <div class="head">
                             <img src="/Image&icon/icon1/javascript-original.svg" alt="logo javascript">
                             <div class="txt">
@@ -378,7 +379,7 @@
                             <p>70%</p>   
                         </div>
                     </div>
-                    <div class="skill">
+                    <div class="skill" data-aos="fade-up">
                         <div class="head">
                             <img src="/Image&icon/icon1/git-icon-original.svg" alt="logo Git&Github">
                             <div class="txt">
@@ -393,7 +394,7 @@
                             <p>70%</p>
                         </div>
                     </div>
-                    <div class="skill">
+                    <div class="skill"  data-aos="fade-up">
                         <div class="head">
                             <img src="/Image&icon/icon1/responsive-design-symbol-svgrepo-com.svg" alt="logo responsive">
                             <div class="txt">
@@ -408,7 +409,7 @@
                             <p>80%</p>
                         </div>
                     </div>
-                    <div class="skill">
+                    <div class="skill" data-aos="fade-up">
                         <div class="head">
                             <img src="/Image&icon/icon1/bootstrap-5-original.svg" alt="logo bootstrap">
                             <div class="txt">
@@ -424,7 +425,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="experience">
+                <div class="experience" data-aos="fade-up">
                         <div class="exp">
                             <img src="/Image&icon/icon1/open-book-icon.svg" alt="logo livre">
                             <div class="txt">
@@ -466,7 +467,7 @@
                             N'hésitez pas à m'écrire, je réponds rapidement.
                         </p>
                     </div>
-                    <div class="adresses">
+                    <div class="adresses" data-aos="fade-right">
                         <div class="adresse">
                             <img src="/Image&icon/icon1/mail-svgrepo-com.svg" alt="logo mail">
                             <div class="info">
@@ -512,7 +513,7 @@
                     </div>
                     
                 </div>
-                <form class="message">
+                <form class="message" data-aos="fade-left">
                     <p>NOM</p>
                     <input type="text" name="nom" placeholder="Votre nom" required>
                     <p>EMAIL</p>
@@ -552,7 +553,9 @@
         <script src="./js/aos.js"></script>
         <script>
             AOS.init({
-                once: true
+                once: false,
+                offset: 200,
+                mirror: true
             });
         
         </script>
