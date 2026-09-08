@@ -561,7 +561,11 @@ transition: 0.5s;
 #projets .card .texte {
     padding: 10px 20px;
 }
-
+#projets .card .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 #projets .card .texte img {
     width: 30px;
     height: 30px;
