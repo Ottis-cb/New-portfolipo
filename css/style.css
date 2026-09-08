@@ -4,10 +4,9 @@
     box-sizing: border-box;
 }
 body {
-width: 100%;
-background: #05070d;
-font-family: 'Inter', sans-serif;
-margin: 0 auto;
+    width: 100%;
+    background: #05070d;
+    font-family: 'Inter', sans-serif;
 }
 html::-webkit-scrollbar {
     width: 12px;
@@ -45,6 +44,7 @@ html {scroll-behavior: smooth;}
 }
 main {
     width: 100%;
+    margin: 0;
 }
 
 h1,h2 {
@@ -185,6 +185,21 @@ li a:hover::after {
     background: #17171a;
     overflow: visible;
 }
+#profil::before {
+        content: "";
+        position: absolute;
+        width: 700px;
+        height: 700px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(150, 150, 150, 0.13) 0%,
+        rgba(100, 100, 100, 0.05) 35%,
+        transparent 70%);
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+     }
+     
 #profil .container {
     width: 100%;
     height: 100vh;
@@ -209,11 +224,11 @@ li a:hover::after {
     
 }
 #profil .profil-image video {
-    width: 1300px;
+    width: 1250px;
     height: auto;
     display: block;
     position: absolute;
-    left: 300px;
+    left: 23%;
 
 }
 #profil .texte {
@@ -313,7 +328,6 @@ transition: 0.5s;
     align-items: center;
     justify-content: center;
     background: #17181d;
-
 }
 
 #apropos h2 {
@@ -827,6 +841,8 @@ transition: 0.5s;
     height: auto;
     padding: 5% 5% 6% 4%;
     background: linear-gradient(60deg,black, #2c2c36,black);
+    overflow: hidden;
+
 }
 #contact .texte .titre {
     animation: titre linear;
@@ -1299,6 +1315,26 @@ footer .footer-right {
 
 /* RESPONSIVE*/
 @media  screen and (max-width: 1200px) {
+    #profil .container {
+        padding: 0 5%;
+        gap: 10px;
+    }
+    #profil .texte {
+        width: 52%;
+    }
+    #profil .texte h1 {
+        font-size: 6.5rem;
+        letter-spacing: -7px;
+    }
+    #profil .profil-image {
+        width: 48%;
+        height: 600px;
+    }
+    #profil .profil-image video {
+        width: 1050px;
+        left: auto;
+        right: -80px;
+    }
     #apropos .about{
         flex-direction:column;
         gap: 20px;
@@ -1317,6 +1353,13 @@ footer .footer-right {
     #apropos .apropos .about .image img{
         display: none;
     }
+    #profil .texte h1 {
+        font-size: 5.8rem;
+    }
+    #profil .profil-image video {
+        width: 950px;
+        right: -100px;
+    }
 }
 
 /* Tablette */
@@ -1325,31 +1368,30 @@ footer .footer-right {
     h2{
         font-size:30px;
     }
+    
 
-    #profil{
-        flex-direction:column-reverse;
-        text-align:center;
-        padding:120px 30px 60px;
-        gap:60px;
-    }
-
-    #profil .texte{
-        min-width:100%;
+    #profil .texte h1 {
+        font-size: 5rem;
+        letter-spacing: -5px;
+        line-height: .85;
     }
 
     #profil .terminal{
         margin:auto;
     }
 
-    #profil .texte .icon,
-    #profil .texte .buttons{
+    #profil .texte .icon{
         justify-content:center;
     }
-
-    #profil .profil img{
-        width:350px;
-        height:350px;
+    #profil .container .profil-image video {
+        width: 1045px;
     }
+    #profil .container .buttons button {
+        font-size: .9rem;
+        padding: 15px;
+        width: 40%;
+    }
+
 
     /* A propos */
 
@@ -1505,16 +1547,28 @@ footer .footer-right {
 
     #profil {
         gap: 2rem;
+        width: 100%;
+    }
+    #profil .container {
+        width: 100%;
     }
     #profil .profil-image {
         z-index: 0;
         position: absolute;
         display: flex;
         justify-content: center;
+        width: 300px;
+        height: 300px;
     }
-    
+    #profil .profil-image video {
+        left: -170%;
+    }
+    #profil .texte {
+        width: 95%;
+        text-align: center;
+    }
     #profil .texte h1{
-        font-size:2.5rem;
+        font-size:2.8rem;
         margin-top: 0.5rem;
     }
 
