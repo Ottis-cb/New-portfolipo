@@ -240,27 +240,20 @@ li a:hover::after {
     gap: 20px;
     z-index: 2;
 }
-
-
-#profil .texte h1 {
-    font-size: 8.2rem;
-    font-weight: 800;
-    font-family: 'Space_Grotesk', sans-serif;
-    line-height: 0.78;
-    color: #e5e5e5;
-    opacity: 0;
-    animation: fadeTop1 0.7s ease forwards;
-    animation-delay: 0.9s;
-    letter-spacing:-10px;
+#profil .texte .dispo {
+    display: flex;
+    align-items: center;
+    gap: 2%;
 }
-#profil .texte h1 span {
-    color: rgb(183, 183, 183);
+#profil .texte .dispo span {
+    color: gray;
+    background: gray;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
 }
-#profil .texte p {
-    color: #999ba2;
-    letter-spacing: 2px;
-    font-size: 1rem;
-    max-width: 590px;
+#profil .texte .dispo p {
+    letter-spacing: 5px;
 }
 #profil .texte > p:first-child {
     color: #85868d;
@@ -268,14 +261,57 @@ li a:hover::after {
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
+    opacity: 0;
+    animation: apparitiongauche 0.7s forwards;
+    animation-delay: 0.3s;
+}
+
+#profil .texte h1 {
+    font-size: 7.5rem;
+    font-weight: 800;
+    font-family: 'Space_Grotesk', sans-serif;
+    line-height: 0.80;
+    color: #e5e5e5;
+    opacity: 0;
+    animation: apparitiongauche 0.9s forwards;
+    animation-delay: 0.6s;
+    letter-spacing:-10px;
+}
+#profil .texte h1 span {
+    color: rgb(183, 183, 183);
+}
+#profil .texte h1 .outline {
+    color: transparent;
+    -webkit-text-stroke: 1.5px #d9d9d9;
+    text-shadow: none;
+}
+#profil .texte p {
+    color: #999ba2;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    max-width:750px;
+    opacity: 0;
+    animation: apparitiongauche 0.9s forwards;
+    animation-delay: 0.9s;
+}
+#profil .texte .description:before {
+    content: "";
+    display: block;
+    width: 20%;
+    height: 3px;
+    background: #242424;
+    margin: 3% 0 5% 0;
 }
 #profil .buttons {
     display: flex;
     gap: 15px;
     margin-top: 10px;
+    opacity: 0;
+    animation: apparitiongauche 0.9s forwards;
+    animation-delay: 1.2s;
 }
 #profil .buttons button {
-padding: 16px 80px;
+padding: 15px 50px;
 border: none;
 border-radius: 5px;
 font-size: 1rem;
@@ -283,7 +319,13 @@ font-weight: 600;
 color: #24252a;
 cursor: pointer;
 transition: 0.5s; 
-
+display: flex;
+align-items: center;
+gap: 15px;
+}
+#profil .buttons button img {
+    width: 30px;
+    height: 30px;
 }
 
 #profil .texte .buttons button:hover{
@@ -1239,7 +1281,7 @@ footer .footer-right {
 }
 @keyframes apparitiongauche {
     from {
-        transform: translateX(-50px);
+        transform: translateX(-100px);
         opacity: 0;
     }
     to {
